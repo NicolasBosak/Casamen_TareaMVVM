@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:NCviewModels="clr-namespace:NCAppNotas.NCViewModels"
              x:Class="NCAppNotas.Views.NCAboutPage"
-             Title="NCAboutPage">
+             Title="Acerca de esta APP">
 
     <ContentPage.BindingContext>
         <NCviewModels:NCAboutViewModel />
@@ -18,7 +18,7 @@
         </HorizontalStackLayout>
 
         <Label Text="{Binding Message}" />
-        <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
+        <Button Text="Aprende mas en internet..." Command="{Binding ShowMoreInfoCommand}" />
     </VerticalStackLayout>
 
 </ContentPage>

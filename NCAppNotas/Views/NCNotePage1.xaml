@@ -3,22 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ncviewModels="clr-namespace:NCAppNotas.NCViewModels"
              x:Class="NCAppNotas.Views.NCNotePage1"
-             Title="NCNotePage1">
+             Title="Bienvenido a tu Editor">
     <ContentPage.BindingContext>
         <ncviewModels:NCNoteViewModel />
     </ContentPage.BindingContext>
     <VerticalStackLayout Spacing="10" Margin="5">
         <Editor x:Name="TextEditor"
-                Placeholder="Enter your note"
+                Placeholder="Escriba su Nota"
                 Text="{Binding Text}"
                 HeightRequest="100" />
 
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
-            <Button Text="Save"
+            <Button Text="Guardar"
                     Command="{Binding SaveCommand}"/>
 
             <Button Grid.Column="1"
-                    Text="Delete"
+                    Text="Borrar"
                     Command="{Binding DeleteCommand}"/>
         </Grid>
     </VerticalStackLayout>
