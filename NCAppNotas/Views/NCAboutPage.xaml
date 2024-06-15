@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:NCModels="clr-namespace:NCAppNotas.NCModels"
+             xmlns:NCviewModels="clr-namespace:NCAppNotas.NCViewModels"
              x:Class="NCAppNotas.Views.NCAboutPage"
              Title="NCAboutPage">
 
     <ContentPage.BindingContext>
-        <NCModels:NCAbout />
+        <NCviewModels:NCAboutViewModel />
     </ContentPage.BindingContext>
     <VerticalStackLayout Spacing="10" Margin="10">
         <HorizontalStackLayout Spacing="10">
@@ -18,7 +18,7 @@
         </HorizontalStackLayout>
 
         <Label Text="{Binding Message}" />
-        <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
+        <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
     </VerticalStackLayout>
 
 </ContentPage>
