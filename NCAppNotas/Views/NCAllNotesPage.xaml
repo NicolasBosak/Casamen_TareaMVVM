@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ncviewModels="clr-namespace:NCAppNotas.NCViewModels"
              x:Class="NCAppNotas.Views.NCAllNotesPage"
-             Title="NCAllNotesPage">
+             Title="NCAllNotesPage"
+             NavigatedTo="ContentPage_NavigatedTo">
 
     <ContentPage.BindingContext>
         <ncviewModels:NCNotesViewModel />

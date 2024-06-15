@@ -14,7 +14,7 @@ namespace NCAppNotas.NCViewModels
         public string Title => AppInfo.Name;
         public string Version => AppInfo.VersionString;
         public string MoreInfoUrl => "https://aka.ms/maui";
-        public string Message => "App de NOtas por Nicolas Casamen";
+        public string Message => "App de Notas por Nicolas Casamen";
         public ICommand ShowMoreInfoCommand { get; }
 
         public NCAboutViewModel()

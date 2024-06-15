@@ -7,7 +7,7 @@ using NCAppNotas.NCModels;
 
 namespace NCAppNotas.NCViewModels
 {
-    internal class NCNotesViewModel
+    internal class NCNotesViewModel: IQueryAttributable
     {
 
         public ObservableCollection<NCViewModels.NCNoteViewModel> AllNotes { get; }
@@ -50,11 +50,13 @@ namespace NCAppNotas.NCViewModels
 
                 // If note is found, update it
                 if (matchedNote != null)
+                {
                     matchedNote.Reload();
-
+                    AllNotes.Move(AllNotes.IndexOf(matchedNote), 0);
+                }
                 // If note isn't found, it's new; add it.
                 else
-                    AllNotes.Add(new NCNoteViewModel(NCNote.Load(noteId)));
+                    AllNotes.Insert(0, new NCNoteViewModel(NCModels.NCNote.Load(noteId)));
             }
         }
     }
